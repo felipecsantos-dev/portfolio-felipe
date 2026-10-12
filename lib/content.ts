@@ -1,18 +1,7 @@
 // Todo o texto e os dados do site ficam aqui.
 // Campos marcados com PENDENTE ainda precisam dos dados reais.
 
-export type TechSlug =
-  | "html5"
-  | "css"
-  | "javascript"
-  | "typescript"
-  | "react"
-  | "nextdotjs"
-  | "tailwindcss"
-  | "nodedotjs"
-  | "git"
-  | "github"
-  | "figma";
+export type TechSlug = "html5" | "css" | "git" | "github" | "javascript" | "python";
 
 export type Project = {
   title: string;
@@ -22,31 +11,43 @@ export type Project = {
   image: string | null;
 };
 
+const sections = {
+  inicio: { label: "Início", href: "#inicio" },
+  servicos: { label: "Serviços", href: "#servicos" },
+  projetos: { label: "Projetos", href: "#projetos" },
+  processo: { label: "Como funciona", href: "#processo" },
+  sobre: { label: "Sobre", href: "#sobre" },
+  competencias: { label: "Competências", href: "#competencias" },
+  contato: { label: "Contato", href: "#contato" },
+};
+
 export const site = {
-  name: "Felipe",
+  brand: "Felipe.Dev",
+  name: "Felipe Santos",
   role: "Desenvolvedor Web",
   tagline:
     "Crio sites rápidos e bem acabados para negócios que querem ser encontrados e receber mais contatos.",
   url: "https://example.com", // PENDENTE: endereço final do site
 
   contact: {
-    // PENDENTE: só números, com DDI e DDD. Ex.: "5511999999999"
-    whatsapp: "",
+    // Só números, com DDI e DDD.
+    whatsapp: "5538991067761",
     whatsappMessage: "Olá, Felipe! Vi seu portfólio e quero um orçamento para um site.",
-    email: "", // PENDENTE
-    github: "", // PENDENTE: URL completa
-    linkedin: "", // PENDENTE: URL completa
+    email: "felipecsantos.dev@gmail.com",
+    github: "https://github.com/felipecsantos-dev",
+    linkedin: "https://www.linkedin.com/in/felipe-santos-9a5014443/",
   },
 
   nav: [
-    { label: "Início", href: "#inicio" },
-    { label: "Serviços", href: "#servicos" },
-    { label: "Projetos", href: "#projetos" },
-    { label: "Sobre", href: "#sobre" },
-    { label: "Competências", href: "#competencias" },
+    sections.inicio,
+    sections.servicos,
+    sections.projetos,
+    sections.sobre,
+    sections.competencias,
   ],
 
-  // PENDENTE: confirmar os tipos de site oferecidos
+  footerNav: Object.values(sections),
+
   services: [
     {
       icon: "landing",
@@ -68,26 +69,14 @@ export const site = {
     },
   ],
 
-  // PENDENTE: projetos reais (nome, descrição, link e captura de tela)
+  // O primeiro projeto aparece em destaque e no mockup do hero.
   projects: [
     {
-      title: "Nome do projeto em destaque",
+      title: "Estúdio Tatuagem",
       description:
-        "Descrição curta do projeto: para quem foi feito e qual problema resolveu.",
-      url: null,
-      image: null,
-    },
-    {
-      title: "Nome do segundo projeto",
-      description: "Descrição curta do projeto.",
-      url: null,
-      image: null,
-    },
-    {
-      title: "Nome do terceiro projeto",
-      description: "Descrição curta do projeto.",
-      url: null,
-      image: null,
+        "Site de estudo para um estúdio de tatuagem fictício, feito com HTML e CSS. Visual escuro, tipografia marcante e chamada direta para orçamento.",
+      url: "https://estudiotatuagem-eight.vercel.app/",
+      image: "/projects/estudio-tatuagem.webp",
     },
   ] as Project[],
 
@@ -115,31 +104,25 @@ export const site = {
   ],
 
   about: {
-    // PENDENTE: revisar com a sua história
     paragraphs: [
-      "Sou desenvolvedor web e estudante de tecnologia. Gosto de transformar uma ideia em um site que funciona bem em qualquer tela e é simples de usar.",
-      "Cuido do projeto do início ao fim: estrutura, visual, desempenho e publicação. Você fala direto comigo, sem intermediários.",
+      "Sou estudante de Análise e Desenvolvimento de Sistemas e crio sites em HTML e CSS, com atenção ao acabamento e ao funcionamento em qualquer tela.",
+      "Trabalho desde 2023 com atendimento e orçamentos no varejo. Aprendi a ouvir o que o cliente precisa e a transformar o pedido em uma entrega clara, no prazo combinado.",
     ],
     education: {
-      institution: "Nome da faculdade", // PENDENTE
-      course: "Nome do curso", // PENDENTE
-      status: "Período atual e previsão de formatura", // PENDENTE
+      course: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+      institution: "Universidade Pitágoras Unopar Anhanguera, Pirapora/MG",
+      status: "Cursando a 1ª série. Início em 08/2026, duração de 2 anos.",
     },
   },
 
-  // PENDENTE: confirmar as tecnologias que você domina
   skills: [
-    {
-      group: "Front-end",
-      items: ["html5", "css", "javascript", "typescript", "react", "nextdotjs", "tailwindcss"],
-    },
-    { group: "Back-end", items: ["nodedotjs"] },
-    { group: "Ferramentas", items: ["git", "github", "figma"] },
+    { group: "Domino", items: ["html5", "css", "git", "github"] },
+    { group: "Estudando agora", items: ["javascript", "python"] },
   ] as { group: string; items: TechSlug[] }[],
 
   // Ícones que orbitam o mockup do hero
   orbit: {
-    outer: ["react", "typescript", "nodedotjs", "figma"],
-    inner: ["html5", "css", "javascript"],
+    outer: ["html5", "css", "git", "github"],
+    inner: ["javascript", "python"],
   } as { outer: TechSlug[]; inner: TechSlug[] },
 };

@@ -18,7 +18,7 @@ export default function Home() {
         Pular para o conteúdo
       </a>
       <Navbar />
-      <main id="conteudo">
+      <main id="conteudo" className="overflow-x-clip">
         <Hero />
         <Services />
         <Projects />

@@ -15,10 +15,12 @@ const icons = {
 } as const;
 
 export function Process() {
+  const half = site.process.length / 2;
+
   return (
     <section id="processo" className="mx-auto max-w-7xl px-4 py-20 md:py-28">
-      <Reveal>
-        <h2 className="text-balance max-w-[20ch] text-3xl font-medium tracking-tight md:text-5xl">
+      <Reveal from="left">
+        <h2 className="max-w-[20ch] text-3xl font-medium tracking-tight text-balance md:text-5xl">
           Do primeiro contato ao site no ar
         </h2>
       </Reveal>
@@ -29,10 +31,10 @@ export function Process() {
           const last = index === site.process.length - 1;
           return (
             <li key={step.title}>
-              <Reveal delay={index * 0.1}>
+              <Reveal from={index < half ? "left" : "right"} delay={(index % half) * 0.1}>
                 <div className="flex items-center">
-                  <span className="grid size-13 shrink-0 place-items-center rounded-full border border-accent-soft/40 text-accent-soft">
-                    <Icon size={24} aria-hidden />
+                  <span className="grid size-13 shrink-0 place-items-center rounded-full border border-accent/40 text-accent">
+                    <Icon size={24} weight="light" aria-hidden />
                   </span>
                   {!last && <span className="hidden h-px flex-1 bg-line lg:block" aria-hidden />}
                 </div>

@@ -16,7 +16,7 @@ function Ring({
 }) {
   return (
     <div
-      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent-soft/20"
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-text/12"
       style={{ width: size, height: size }}
     >
       <div className={`absolute inset-0 ${reverse ? "animate-orbit-reverse" : "animate-orbit"}`}>
@@ -27,7 +27,7 @@ function Ring({
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <div style={{ transform: `rotate(${-angle}deg)` }}>
                   <div
-                    className={`grid size-11 place-items-center rounded-full border border-text/15 bg-surface text-accent-soft md:size-13 ${reverse ? "animate-orbit" : "animate-orbit-reverse"}`}
+                    className={`grid size-11 place-items-center rounded-full border border-text/15 bg-surface text-accent md:size-13 ${reverse ? "animate-orbit" : "animate-orbit-reverse"}`}
                   >
                     <TechIcon slug={slug} decorative className="size-5 md:size-6" />
                   </div>

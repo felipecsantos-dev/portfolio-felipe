@@ -2,14 +2,21 @@ import { site } from "@/lib/content";
 import { MobileMenu } from "./MobileMenu";
 import { QuoteButton } from "./QuoteButton";
 
+export function Brand() {
+  const [first, ...rest] = site.brand.split(".");
+  return (
+    <a href="#inicio" className="text-xl font-semibold tracking-tight" translate="no">
+      {first}
+      <span className="text-muted">.{rest.join(".")}</span>
+    </a>
+  );
+}
+
 export function Navbar() {
   return (
     <header className="sticky top-4 z-40 px-4">
       <div className="glass mx-auto flex h-16 max-w-7xl items-center justify-between rounded-full pr-3 pl-6">
-        <a href="#inicio" className="text-xl font-semibold tracking-tight">
-          {site.name.toLowerCase()}
-          <span className="text-accent">.</span>
-        </a>
+        <Brand />
 
         <nav aria-label="Principal" className="hidden lg:block">
           <ul className="flex items-center gap-1">

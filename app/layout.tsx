@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" className={`${outfit.variable} antialiased`}>
       <head>
-        <meta name="theme-color" content="#0a0e1a" />
+        <meta name="theme-color" content="#0b0b0d" />
       </head>
       <body className="min-h-[100dvh] font-sans">{children}</body>
     </html>

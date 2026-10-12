@@ -1,6 +1,7 @@
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Project } from "@/lib/content";
 import { site } from "@/lib/content";
+import { Bezel } from "./Bezel";
 import { ProjectShot } from "./ProjectShot";
 import { Reveal } from "./Reveal";
 
@@ -11,11 +12,13 @@ function VisitLink({ project }: { project: Project }) {
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="mt-5 inline-flex items-center gap-1.5 font-medium text-accent-soft underline-offset-4 hover:underline"
+      className="group mt-6 inline-flex h-12 items-center gap-3 rounded-full border border-text/25 pr-1.5 pl-5 font-medium transition-[background-color,border-color,transform] duration-200 hover:border-text/60 hover:bg-text/5 active:scale-[0.98]"
     >
       Visitar site
-      <ArrowUpRightIcon size={18} aria-hidden />
       <span className="sr-only">: {project.title}</span>
+      <span className="grid size-9 place-items-center rounded-full bg-text/10 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+        <ArrowUpRightIcon size={16} weight="light" aria-hidden />
+      </span>
     </a>
   );
 }
@@ -25,31 +28,31 @@ export function Projects() {
 
   return (
     <section id="projetos" className="mx-auto max-w-7xl px-4 py-20 md:py-28">
-      <Reveal>
-        <h2 className="text-balance text-3xl font-medium tracking-tight md:text-5xl">Projetos recentes</h2>
+      <Reveal from="left">
+        <h2 className="text-3xl font-medium tracking-tight text-balance md:text-5xl">Projetos</h2>
       </Reveal>
 
-      <Reveal className="mt-12">
-        <article className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.5fr_1fr] lg:gap-12">
-          <div className="overflow-hidden rounded-card border border-line">
+      <article className="mt-12 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.5fr_1fr] lg:gap-12">
+        <Reveal from="left">
+          <Bezel>
             <ProjectShot project={featured} sizes="(min-width: 1024px) 720px, 100vw" />
-          </div>
-          <div>
-            <h3 className="text-2xl font-medium tracking-tight md:text-4xl">{featured.title}</h3>
-            <p className="mt-4 max-w-[46ch] text-lg leading-relaxed text-muted">{featured.description}</p>
-            <VisitLink project={featured} />
-          </div>
-        </article>
-      </Reveal>
+          </Bezel>
+        </Reveal>
+        <Reveal from="right" delay={0.1}>
+          <h3 className="text-2xl font-medium tracking-tight md:text-4xl">{featured.title}</h3>
+          <p className="mt-4 max-w-[46ch] text-lg leading-relaxed text-muted">{featured.description}</p>
+          <VisitLink project={featured} />
+        </Reveal>
+      </article>
 
       {others.length > 0 && (
         <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2">
           {others.map((project, index) => (
-            <Reveal key={project.title} delay={index * 0.08}>
+            <Reveal key={project.title} from={index % 2 === 0 ? "left" : "right"}>
               <article>
-                <div className="overflow-hidden rounded-card border border-line">
+                <Bezel>
                   <ProjectShot project={project} sizes="(min-width: 768px) 600px, 100vw" />
-                </div>
+                </Bezel>
                 <h3 className="mt-6 text-2xl font-medium tracking-tight">{project.title}</h3>
                 <p className="mt-2 max-w-[52ch] leading-relaxed text-muted">{project.description}</p>
                 <VisitLink project={project} />

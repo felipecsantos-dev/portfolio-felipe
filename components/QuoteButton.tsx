@@ -6,9 +6,16 @@ const sizes = {
   lg: "h-13 px-7 text-base",
 };
 
+// O brilho do hover fica em uma camada própria para a troca de cor ser suave.
 const variants = {
-  accent: "bg-accent text-bg hover:bg-accent-soft",
-  inverse: "bg-bg text-text hover:bg-surface",
+  accent: {
+    base: "bg-accent text-bg",
+    sheen: "bg-[linear-gradient(135deg,#ffffff_25%,#d4d4d8)]",
+  },
+  inverse: {
+    base: "bg-bg text-text",
+    sheen: "bg-[#2a2a30]",
+  },
 };
 
 export function QuoteButton({
@@ -22,15 +29,22 @@ export function QuoteButton({
 }) {
   const href = quoteHref();
   const external = href.startsWith("http");
+  const { base, sheen } = variants[variant];
   return (
     <a
       href={href}
       onClick={onClick}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold whitespace-nowrap transition-[background-color,transform] duration-200 active:scale-[0.98] ${sizes[size]} ${variants[variant]}`}
+      className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full font-semibold whitespace-nowrap transition-transform duration-200 active:scale-[0.98] ${sizes[size]} ${base}`}
     >
-      <WhatsappLogoIcon size={20} weight="fill" aria-hidden />
-      Solicitar orçamento
+      <span
+        className={`absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 ${sheen}`}
+        aria-hidden
+      />
+      <span className="relative inline-flex items-center gap-2">
+        <WhatsappLogoIcon size={20} weight="fill" aria-hidden />
+        Solicitar orçamento
+      </span>
     </a>
   );
 }

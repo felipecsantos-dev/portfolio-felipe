@@ -3,7 +3,7 @@ import { quoteHref } from "@/lib/whatsapp";
 
 const sizes = {
   md: "h-11 px-5 text-sm",
-  lg: "h-13 px-7 text-base",
+  lg: "h-12 px-6 text-base sm:h-13 sm:px-7",
 };
 
 // O brilho do hover fica em uma camada própria para a troca de cor ser suave.

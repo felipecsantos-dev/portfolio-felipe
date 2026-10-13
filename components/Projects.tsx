@@ -27,20 +27,20 @@ export function Projects() {
   const [featured, ...others] = site.projects;
 
   return (
-    <section id="projetos" className="mx-auto max-w-7xl px-4 py-20 md:py-28">
+    <section id="projetos" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-28">
       <Reveal from="left">
-        <h2 className="text-3xl font-medium tracking-tight text-balance md:text-5xl">Projetos</h2>
+        <h2 className="text-[1.75rem] leading-tight font-medium tracking-tight text-balance md:text-5xl md:leading-none">Projetos</h2>
       </Reveal>
 
-      <article className="mt-12 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.5fr_1fr] lg:gap-12">
+      <article className="mt-10 grid grid-cols-1 items-center gap-6 md:mt-12 lg:grid-cols-[1.5fr_1fr] lg:gap-12">
         <Reveal from="left">
           <Bezel>
             <ProjectShot project={featured} sizes="(min-width: 1024px) 720px, 100vw" />
           </Bezel>
         </Reveal>
         <Reveal from="right" delay={0.1}>
-          <h3 className="text-2xl font-medium tracking-tight md:text-4xl">{featured.title}</h3>
-          <p className="mt-4 max-w-[46ch] text-lg leading-relaxed text-muted">{featured.description}</p>
+          <h3 className="text-xl font-medium tracking-tight md:text-4xl">{featured.title}</h3>
+          <p className="mt-3 max-w-[46ch] text-base leading-relaxed text-muted sm:mt-4 sm:text-lg">{featured.description}</p>
           <VisitLink project={featured} />
         </Reveal>
       </article>

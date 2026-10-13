@@ -19,20 +19,21 @@ export function Footer() {
 
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
-        <div>
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 py-12 sm:grid-cols-2 sm:px-8 md:gap-12 md:py-14 lg:grid-cols-[1.4fr_1fr_1.2fr]">
+        <div className="sm:col-span-2 lg:col-span-1">
           <Brand />
-          <p className="mt-3 text-muted">
+          <p className="mt-1 text-muted md:mt-3">
             {site.name}, {site.role}
           </p>
+          <p className="mt-2 max-w-[32ch] text-muted">{site.seo.serviceArea}</p>
         </div>
 
         <nav aria-label="Rodapé">
           <h2 className="font-medium">Navegação</h2>
-          <ul className="mt-4 flex flex-col gap-3">
+          <ul className="mt-2 flex flex-col lg:mt-4 lg:gap-3">
             {site.footerNav.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className={linkClass}>
+                <a href={item.href} className={`inline-flex min-h-11 items-center lg:min-h-0 ${linkClass}`}>
                   {item.label}
                 </a>
               </li>
@@ -42,13 +43,13 @@ export function Footer() {
 
         <div>
           <h2 className="font-medium">Contato</h2>
-          <ul className="mt-4 flex flex-col gap-3">
+          <ul className="mt-2 flex flex-col lg:mt-4 lg:gap-3">
             {contacts.map(({ label, href, Icon, external }) => (
               <li key={href}>
                 <a
                   href={href}
                   {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className={`inline-flex items-center gap-2.5 break-all ${linkClass}`}
+                  className={`inline-flex min-h-11 items-center gap-2.5 [overflow-wrap:anywhere] lg:min-h-0 ${linkClass}`}
                 >
                   <Icon size={20} weight="light" className="shrink-0" aria-hidden />
                   {label}

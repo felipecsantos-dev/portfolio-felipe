@@ -1,11 +1,12 @@
 import { site } from "@/lib/content";
 import { MobileMenu } from "./MobileMenu";
+import { NavbarShell } from "./NavbarShell";
 import { QuoteButton } from "./QuoteButton";
 
 export function Brand() {
   const [first, ...rest] = site.brand.split(".");
   return (
-    <a href="#inicio" className="text-xl font-semibold tracking-tight" translate="no">
+    <a href="#inicio" className="inline-flex min-h-11 items-center text-xl font-semibold tracking-tight" translate="no">
       {first}
       <span className="text-muted">.{rest.join(".")}</span>
     </a>
@@ -14,8 +15,8 @@ export function Brand() {
 
 export function Navbar() {
   return (
-    <header className="sticky top-4 z-40 px-4">
-      <div className="glass mx-auto flex h-16 max-w-7xl items-center justify-between rounded-full pr-3 pl-6">
+    <NavbarShell>
+      <div className="glass mx-auto flex h-14 max-w-7xl items-center justify-between rounded-full pr-2 pl-5 sm:h-16 sm:pr-3 sm:pl-6">
         <Brand />
 
         <nav aria-label="Principal" className="hidden lg:block">
@@ -40,6 +41,6 @@ export function Navbar() {
           <MobileMenu />
         </div>
       </div>
-    </header>
+    </NavbarShell>
   );
 }

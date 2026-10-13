@@ -14,11 +14,11 @@ Início · Serviços · Projetos · Como funciona · Sobre · Competências · C
 
 - Next.js 16 (App Router) com React 19 e TypeScript
 - Tailwind CSS 4 com cores definidas em variáveis de tema
-- Layout responsivo, com menu próprio para celular
+- Layout responsivo, com menu próprio para celular e navbar que some ao rolar para baixo
 - Animações de entrada com Motion, desativadas para quem prefere movimento reduzido
 - Botão de orçamento que abre o WhatsApp com mensagem pronta
 - Conteúdo centralizado em um único arquivo (`lib/content.ts`)
-- SEO: meta tags e Open Graph
+- SEO: meta tags, Open Graph, JSON-LD, sitemap e robots
 - Git e GitHub
 
 ## Como rodar
@@ -32,7 +32,8 @@ Depois abra http://localhost:3000 no navegador.
 
 ## Próximos passos
 
-- [ ] Publicar o site e configurar o domínio
+- [x] Publicar o site na Vercel
+- [ ] Configurar um domínio próprio
 - [ ] Adicionar os outros projetos de estudo
 - [ ] Destacar na navbar a seção que está sendo vista
 

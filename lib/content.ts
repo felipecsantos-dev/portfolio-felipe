@@ -1,5 +1,4 @@
 // Todo o texto e os dados do site ficam aqui.
-// Campos marcados com PENDENTE ainda precisam dos dados reais.
 
 export type TechSlug = "html5" | "css" | "git" | "github" | "javascript" | "python";
 
@@ -9,6 +8,8 @@ export type Project = {
   url: string | null;
   // Caminho dentro de /public, ex.: "/projects/padaria.png" (proporção 16:10).
   image: string | null;
+  // Montagem do site em notebook e celular, usada no hero (opcional).
+  devices?: string;
 };
 
 const sections = {
@@ -25,9 +26,22 @@ export const site = {
   brand: "Felipe.Dev",
   name: "Felipe Santos",
   role: "Desenvolvedor Web",
+  // Frase da imagem de compartilhamento: é o termo que o cliente busca no Google.
+  headline: "Criação de sites em Pirapora",
   tagline:
-    "Crio sites rápidos e bem acabados para negócios que querem ser encontrados e receber mais contatos.",
-  url: "https://example.com", // PENDENTE: endereço final do site
+    "Seu cliente pesquisa no Google antes de comprar. Faço um site rápido, pronto para ser encontrado e para receber pedidos.",
+  // Sem barra no final. Trocar aqui quando o site ganhar domínio próprio.
+  url: "https://portfolio-felipe-vert-zeta.vercel.app",
+
+  seo: {
+    title: "Criação de sites em Pirapora MG | Felipe.Dev",
+    description:
+      "Criação de sites em Pirapora, MG: landing page, site institucional e loja virtual, prontos para o celular e para o Google. Peça seu orçamento pelo WhatsApp.",
+    city: "Pirapora",
+    state: "MG",
+    phone: "+55 38 99106-7761",
+    serviceArea: "Atendo Pirapora e região.",
+  },
 
   contact: {
     // Só números, com DDI e DDD.
@@ -48,28 +62,32 @@ export const site = {
 
   footerNav: Object.values(sections),
 
+  servicesTitle: "Escolha o site que o seu negócio precisa",
+  // Diferencial mostrado na seção Serviços, sem termos técnicos.
+  seoPitch:
+    "Entrego cada site preparado para o Google: ele entende o que você vende e onde você atende. Muitos sites da região saem sem esse cuidado, e o seu larga na frente deles.",
+
   services: [
     {
       icon: "landing",
       title: "Landing page",
       description:
-        "Uma página focada em um objetivo: apresentar sua oferta e levar o visitante a entrar em contato.",
+        "Uma página com uma oferta e um botão. O visitante que chega pelo anúncio ou pelo Instagram sabe o que fazer: chamar você.",
     },
     {
       icon: "institutional",
       title: "Site institucional",
       description:
-        "Seu negócio apresentado com clareza: quem você é, o que faz e como falar com você.",
+        "Seu negócio com endereço próprio no Google, mostrando o que você vende e como falar com você.",
     },
     {
       icon: "store",
       title: "Loja virtual",
-      description:
-        "Catálogo e vendas online, com uma estrutura que você consegue manter sozinho.",
+      description: "Seu catálogo aberto 24 horas, com produtos que você mesmo cadastra e atualiza.",
     },
   ],
 
-  // O primeiro projeto aparece em destaque e no mockup do hero.
+  // O primeiro projeto aparece em destaque na seção Projetos e nos aparelhos do hero.
   projects: [
     {
       title: "Estúdio Tatuagem",
@@ -77,6 +95,7 @@ export const site = {
         "Site de estudo para um estúdio de tatuagem fictício, feito com HTML e CSS. Visual escuro, tipografia marcante e chamada direta para orçamento.",
       url: "https://estudiotatuagem-eight.vercel.app/",
       image: "/projects/estudio-tatuagem.webp",
+      devices: "/projects/estudio-tatuagem-devices.webp",
     },
   ] as Project[],
 
@@ -105,8 +124,8 @@ export const site = {
 
   about: {
     paragraphs: [
-      "Sou estudante de Análise e Desenvolvimento de Sistemas e crio sites em HTML e CSS, com atenção ao acabamento e ao funcionamento em qualquer tela.",
-      "Trabalho desde 2023 com atendimento e orçamentos no varejo. Aprendi a ouvir o que o cliente precisa e a transformar o pedido em uma entrega clara, no prazo combinado.",
+      "Sou de Pirapora e estudo Análise e Desenvolvimento de Sistemas na Unopar. Crio sites em HTML e CSS e cuido do acabamento em cada tela, do celular ao computador.",
+      "Precisa de um site e não sabe por onde começar? Você me conta o que vende e eu cuido do resto, do layout à publicação.",
     ],
     education: {
       course: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
@@ -119,6 +138,11 @@ export const site = {
     { group: "Domino", items: ["html5", "css", "git", "github"] },
     { group: "Estudando agora", items: ["javascript", "python"] },
   ] as { group: string; items: TechSlug[] }[],
+
+  contactSection: {
+    title: "Conte o que o seu negócio precisa",
+    text: "Mande o tipo de site e o prazo que você tem. Respondo com o valor e a data de entrega.",
+  },
 
   // Ícones que orbitam o mockup do hero
   orbit: {

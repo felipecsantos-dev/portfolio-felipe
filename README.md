@@ -4,7 +4,7 @@ Portfólio pessoal e página de captação de clientes para criação de sites, 
 
 > **Projeto pessoal**, desenvolvido com apoio do Claude Code como parte dos meus estudos em desenvolvimento web.
 
-🔗 **Ver online:** em breve
+🔗 **Ver online:** https://portfolio-felipe-vert-zeta.vercel.app/
 
 ## Seções
 

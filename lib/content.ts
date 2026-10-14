@@ -30,8 +30,8 @@ export const site = {
   headline: "Criação de sites em Pirapora",
   tagline:
     "Seu cliente pesquisa no Google antes de comprar. Faço um site rápido, pronto para ser encontrado e para receber pedidos.",
-  // Sem barra no final. Trocar aqui quando o site ganhar domínio próprio.
-  url: "https://portfolio-felipe-vert-zeta.vercel.app",
+  // Sem barra no final. O www e o endereço .vercel.app redirecionam para cá.
+  url: "https://felipesan.com.br",
 
   seo: {
     title: "Criação de sites em Pirapora MG | Felipe.Dev",

@@ -1,6 +1,7 @@
 import {
   EnvelopeSimpleIcon,
   GithubLogoIcon,
+  InstagramLogoIcon,
   LinkedinLogoIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { site } from "@/lib/content";
@@ -10,9 +11,10 @@ const linkClass =
   "text-muted underline-offset-4 transition-colors duration-200 hover:text-accent-soft hover:underline";
 
 export function Footer() {
-  const { email, github, linkedin } = site.contact;
+  const { email, instagram, github, linkedin } = site.contact;
   const contacts = [
     { label: email, href: email && `mailto:${email}`, Icon: EnvelopeSimpleIcon, external: false },
+    { label: "Instagram", href: instagram, Icon: InstagramLogoIcon, external: true },
     { label: "GitHub", href: github, Icon: GithubLogoIcon, external: true },
     { label: "LinkedIn", href: linkedin, Icon: LinkedinLogoIcon, external: true },
   ].filter((contact) => contact.href);

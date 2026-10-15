@@ -21,6 +21,7 @@ const data = {
       },
       areaServed: { "@type": "City", name: site.seo.city },
       founder: { "@id": `${site.url}/#pessoa` },
+      sameAs: [site.contact.instagram],
       makesOffer: site.services.map((service) => ({
         "@type": "Offer",
         itemOffered: { "@type": "Service", name: service.title, description: service.description },
@@ -32,7 +33,7 @@ const data = {
       name: site.name,
       jobTitle: site.role,
       url: site.url,
-      sameAs: [site.contact.github, site.contact.linkedin],
+      sameAs: [site.contact.instagram, site.contact.github, site.contact.linkedin],
     },
     {
       "@type": "WebSite",

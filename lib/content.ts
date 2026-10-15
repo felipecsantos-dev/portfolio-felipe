@@ -50,6 +50,7 @@ export const site = {
     email: "felipecsantos.dev@gmail.com",
     github: "https://github.com/felipecsantos-dev",
     linkedin: "https://www.linkedin.com/in/felipe-santos-9a5014443/",
+    instagram: "https://www.instagram.com/felipesan.dev/",
   },
 
   nav: [

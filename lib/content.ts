@@ -39,13 +39,13 @@ export const site = {
       "Criação de sites em Pirapora, MG: landing page, site institucional e loja virtual, prontos para o celular e para o Google. Peça seu orçamento pelo WhatsApp.",
     city: "Pirapora",
     state: "MG",
-    phone: "+55 38 99106-7761",
+    phone: "+55 38 99161-5519",
     serviceArea: "Atendo Pirapora e região.",
   },
 
   contact: {
     // Só números, com DDI e DDD.
-    whatsapp: "5538991067761",
+    whatsapp: "5538991615519",
     whatsappMessage: "Olá, Felipe! Vi seu portfólio e quero um orçamento para um site.",
     email: "felipecsantos.dev@gmail.com",
     github: "https://github.com/felipecsantos-dev",

@@ -93,7 +93,7 @@ export const site = {
     {
       title: "Estúdio Tatuagem",
       description:
-        "Site de estudo para um estúdio de tatuagem fictício, feito com HTML e CSS. Visual escuro, tipografia marcante e chamada direta para orçamento.",
+        "Site de estudo para um estúdio de tatuagem fictício, feito com HTML, CSS e JavaScript. Visual escuro com seções claras, portfólio com galeria ampliada, animações ao rolar e pedido de orçamento enviado direto pelo WhatsApp.",
       url: "https://estudiotatuagem-eight.vercel.app/",
       image: "/projects/estudio-tatuagem.webp",
       devices: "/projects/estudio-tatuagem-devices.webp",

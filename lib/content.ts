@@ -73,7 +73,7 @@ export const site = {
       icon: "landing",
       title: "Landing page",
       description:
-        "Uma página com uma oferta e um botão. O visitante que chega pelo anúncio ou pelo Instagram sabe o que fazer: chamar você.",
+        "Uma página com 5 seções, da apresentação ao contato, e um botão para o WhatsApp. Quem chega pelo anúncio ou pelo Instagram sabe o que fazer: chamar você.",
     },
     {
       icon: "institutional",

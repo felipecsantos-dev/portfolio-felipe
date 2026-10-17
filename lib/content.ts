@@ -48,8 +48,6 @@ export const site = {
     whatsapp: "5538991615519",
     whatsappMessage: "Olá, Felipe! Vi seu portfólio e quero um orçamento para um site.",
     email: "felipecsantos.dev@gmail.com",
-    github: "https://github.com/felipecsantos-dev",
-    linkedin: "https://www.linkedin.com/in/felipe-santos-9a5014443/",
     instagram: "https://www.instagram.com/felipesan.dev/",
   },
 

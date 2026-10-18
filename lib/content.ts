@@ -48,8 +48,6 @@ export const site = {
     whatsapp: "5538991615519",
     whatsappMessage: "Olá, Felipe! Vi seu portfólio e quero um orçamento para um site.",
     email: "felipecsantos.dev@gmail.com",
-    github: "https://github.com/felipecsantos-dev",
-    linkedin: "https://www.linkedin.com/in/felipe-santos-9a5014443/",
     instagram: "https://www.instagram.com/felipesan.dev/",
   },
 
@@ -73,7 +71,7 @@ export const site = {
       icon: "landing",
       title: "Landing page",
       description:
-        "Uma página com uma oferta e um botão. O visitante que chega pelo anúncio ou pelo Instagram sabe o que fazer: chamar você.",
+        "Uma página com 5 seções, da apresentação ao contato, e um botão para o WhatsApp. Quem chega pelo anúncio ou pelo Instagram sabe o que fazer: chamar você.",
     },
     {
       icon: "institutional",
@@ -88,7 +86,7 @@ export const site = {
     },
   ],
 
-  // O primeiro projeto aparece em destaque na seção Projetos e nos aparelhos do hero.
+  // Os projetos aparecem lado a lado na seção Projetos; o primeiro também vai para os aparelhos do hero.
   projects: [
     {
       title: "Estúdio Tatuagem",
@@ -97,6 +95,13 @@ export const site = {
       url: "https://estudiotatuagem-eight.vercel.app/",
       image: "/projects/estudio-tatuagem.webp",
       devices: "/projects/estudio-tatuagem-devices.webp",
+    },
+    {
+      title: "Doce Aurora – Confeitaria",
+      description:
+        "Site de estudo para uma confeitaria fictícia. Donut 3D que gira com o mouse, coberturas que escorrem entre as seções ao rolar, vitrine em carrossel, cardápio com filtros e mapa de localização.",
+      url: "https://confeitaria-doce-aurora.vercel.app/",
+      image: "/projects/doce-aurora.webp",
     },
   ] as Project[],
 

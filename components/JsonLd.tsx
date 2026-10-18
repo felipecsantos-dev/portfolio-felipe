@@ -33,7 +33,7 @@ const data = {
       name: site.name,
       jobTitle: site.role,
       url: site.url,
-      sameAs: [site.contact.instagram, site.contact.github, site.contact.linkedin],
+      sameAs: [site.contact.instagram],
     },
     {
       "@type": "WebSite",

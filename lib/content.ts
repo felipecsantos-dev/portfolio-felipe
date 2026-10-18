@@ -86,7 +86,7 @@ export const site = {
     },
   ],
 
-  // O primeiro projeto aparece em destaque na seção Projetos e nos aparelhos do hero.
+  // Os projetos aparecem lado a lado na seção Projetos; o primeiro também vai para os aparelhos do hero.
   projects: [
     {
       title: "Estúdio Tatuagem",
@@ -95,6 +95,13 @@ export const site = {
       url: "https://estudiotatuagem-eight.vercel.app/",
       image: "/projects/estudio-tatuagem.webp",
       devices: "/projects/estudio-tatuagem-devices.webp",
+    },
+    {
+      title: "Doce Aurora – Confeitaria",
+      description:
+        "Site de estudo para uma confeitaria fictícia. Donut 3D que gira com o mouse, coberturas que escorrem entre as seções ao rolar, vitrine em carrossel, cardápio com filtros e mapa de localização.",
+      url: "https://confeitaria-doce-aurora.vercel.app/",
+      image: "/projects/doce-aurora.webp",
     },
   ] as Project[],
 
